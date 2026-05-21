@@ -489,15 +489,21 @@ input_data = input_data[[
 
 if predict_now:
 
-    prediction = model.predict(input_data)[0]
+    if model_loaded:
 
-    st.metric(
-        "Predicted Property Price",
-        f"£{prediction:,.0f}"
-    )
+        prediction = model.predict(input_data)[0]
+
+        st.success(
+            "Prediction generated successfully"
+        )
+
+        st.metric(
+            "Predicted Property Price",
+            f"£{prediction:,.0f}"
+        )
 
     else:
 
         st.warning(
-            "ML model temporarily unavailable in cloud deployment."
+            "ML model unavailable in cloud deployment"
         )
