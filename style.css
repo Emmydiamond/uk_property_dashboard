@@ -1,0 +1,43 @@
+/* Main page */
+.main {
+    background-color:#f5f7fa;
+}
+
+/* Dashboard title */
+h1{
+    color:#1f3c88;
+    font-weight:700;
+}
+
+/* Section titles */
+h3{
+    color:#1f3c88;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"]{
+    background-color:#1f3c88;
+}
+
+section[data-testid="stSidebar"] *{
+    color:white;
+}
+
+/* KPI cards */
+
+div[data-testid="metric-container"]{
+    background-color:white;
+    border-left:8px solid #f6b93b;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Charts */
+
+.stPlotlyChart{
+    background-color:white;
+    border-radius:10px;
+    padding:10px;
+    box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+}
