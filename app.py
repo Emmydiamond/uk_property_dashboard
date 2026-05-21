@@ -30,10 +30,13 @@ df = pd.read_csv("uk_dashboard_data.csv")
 # LOAD MODEL
 # ======================
 
-model = joblib.load("model/random_forest.pkl")
-encoders = joblib.load("model/encoders.pkl")
+try:
+    model = joblib.load("model/random_forest.pkl")
+    encoders = joblib.load("model/encoders.pkl")
+    model_loaded = True
 
-
+except:
+    model_loaded = False
 # ======================
 # SIDEBAR FILTERS
 # ======================
@@ -477,15 +480,19 @@ input_data = input_data[[
     "year",
     "month_num"
 ]]
-
 if predict_now:
-    prediction = model.predict(input_data)[0]
 
-    st.success(
-        "Prediction generated successfully"
-    )
+    if model_loaded:
 
-    st.metric(
-        "Predicted Property Price",
-        f"£{prediction:,.0f}"
-    )
+        prediction = model.predict(input_data)[0]
+
+        st.metric(
+            "Predicted Property Price",
+            f"£{prediction:,.0f}"
+        )
+
+    else:
+
+        st.warning(
+            "ML model temporarily unavailable in cloud deployment."
+        )
