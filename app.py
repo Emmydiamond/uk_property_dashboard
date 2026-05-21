@@ -453,12 +453,16 @@ categorical_cols = [
     "District"
 ]
 
-for col in categorical_cols:
+if model_loaded:
 
-    input_data[col] = (
-        encoders[col]
-        .transform(input_data[col].astype(str))
-    )
+    for col in input_data.columns:
+
+        if col in categorical_cols:
+
+            input_data[col] = (
+                encoders[col]
+                .transform(input_data[col])
+            )
 
 # Force numeric format
 
@@ -480,16 +484,15 @@ input_data = input_data[[
     "year",
     "month_num"
 ]]
-if predict_now:
 
-    if model_loaded:
+ if predict_now:
 
-        prediction = model.predict(input_data)[0]
+    prediction = model.predict(input_data)[0]
 
-        st.metric(
-            "Predicted Property Price",
-            f"£{prediction:,.0f}"
-        )
+    st.metric(
+        "Predicted Property Price",
+        f"£{prediction:,.0f}"
+    )
 
     else:
 
