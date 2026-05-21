@@ -455,8 +455,11 @@ categorical_cols = [
 
 if model_loaded:
 
+ if model_loaded:
+
     for col in input_data.columns:
-if col in categorical_cols:
+
+        if col in categorical_cols:
 
             input_data[col] = (
                 encoders[col]
