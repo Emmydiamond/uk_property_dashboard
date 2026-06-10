@@ -21,6 +21,10 @@ Interactive Streamlit dashboard developed for UK residential property analysis a
 - Pandas
 - Scikit-learn
 
+  Live Demo
+
+(https://share.streamlit.io/-/auth/app?redirect_uri=https%3A%2F%2Fukpropertydashboard-gtgbfxutdfmphrvmvhmtbw.streamlit.app%2F)
+
 ### Run Locally
 
 py -m streamlit run app.py
