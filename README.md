@@ -12,6 +12,7 @@ Interactive Streamlit dashboard developed for UK residential property analysis a
 - Location Analysis
 - Property Price Estimator
 - Interactive Filters
+  
 
 ### Tools Used
 
