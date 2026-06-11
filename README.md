@@ -1,30 +1,37 @@
-# UK Property Price Analytics Dashboard
+# UK Property Price Analytics Dashboard with Price Prediction
 
-## Project Overview
+## Overview
 
-Interactive Streamlit dashboard developed for UK residential property analysis and investment decision-making.
+This project analyzes UK property price data through an interactive Streamlit dashboard. Users can explore property market trends and generate estimated property prices based on selected characteristics such as district, year, property type, and tenure.
 
-### Features
+## Dashboard Preview
 
-- Market Overview
-- KPI Metrics
-- Price Drivers Analysis
-- Location Analysis
-- Property Price Estimator
-- Interactive Filters
-  
+![Dashboard Overview](Images/streamlit project 1.png)
 
-### Tools Used
+## Features
 
-- Python
-- Streamlit
-- Plotly
-- Pandas
-- Scikit-learn
+* Interactive dashboard for property market analysis
+* Property price prediction based on selected inputs
+* Data visualization and trend exploration
+* User-friendly Streamlit interface
 
-  ## Project Objective
+## Dashboard Screenshots
 
-This project analyzes UK property price data through an interactive dashboard that allows users to explore trends across different property characteristics. It also includes a predictive model that estimates property prices based on selected inputs such as district, year, property type, and tenure.
+![Property Analysis](Images/streamlit project 2.png)
+
+![Filters](Images/streamlit project 3.png)
+
+![Price Prediction](Images/streamlit project 4.png)
+
+![Dashboard Insights](Images/streamlit project 5.png)
+
+## Tools Used
+
+* Python
+* Pandas
+* Streamlit
+* Scikit-learn
+* Plotly
 
 ##Live Demo
 
